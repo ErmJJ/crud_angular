@@ -1,0 +1,43 @@
+<p>agregar-empleado works!</p>
+<div class="card">
+  <div class="card-header">Agregar Empleado</div>
+  <div class="card-body">
+    <form action="" [formGroup]="form()" (ngSubmit)="enviarDatos()">
+      <!--el ngSubmit es para recibir el evento submit-->
+      <div class="mb-3">
+        <label for="cajaNombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          name=""
+          id="cajaNombre"
+          aria-describedby="helpId"
+          placeholder="Escriba su nombre"
+          formControlName="nombre"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="cajaNombre" class="form-label">Correo</label>
+        <input
+          type="email"
+          class="form-control"
+          name=""
+          id="cajaCorreo"
+          aria-describedby="helpId"
+          placeholder="Escriba su correo"
+          formControlName="correo"
+        />
+      </div>
+      <div class="btn-group" role="group" aria-label="Button group name">
+        <!--Se agrega un submit para enviar el formulario-->
+        <button type="submit" class="btn btn-success">Agregar</button>
+        <a
+          class="btn btn-danger"
+          [routerLink]="['/']"
+          routerLinkActive="active"
+          >Cancelar</a
+        >
+      </div>
+    </form>
+  </div>
+</div>

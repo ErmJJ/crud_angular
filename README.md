@@ -2,6 +2,17 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
 
+```
+ng new empleado-crud
+cd empleado-crud
+ng g c componentes/listar-empleado
+ng g c componentes/agregar-empleado
+ng g c componentes/editar-empleado
+ng g service servicio/service
+
+```
+
+
 ## Development server
 
 To start a local development server, run:

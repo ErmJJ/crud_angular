@@ -1,42 +1,128 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# Node.js dependencies
+node_modules/
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Lock files
+package-lock.json
+pnpm-lock.yaml
+.pnp.*
+.lock-wscript
 
-# IDEs and editors
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Cache directories
+.npm/
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+.svelte-kit/
+.temp/
+.fusebox/
+.dynamodb/
+.firebase/
+.docusaurus/
+.serverless/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Angular specific
+.angular/
+.angular-cache/
+/.angular/cache
+out-tsc/
+tmp/
+dist/
+**/dist/
+**/tmp/
+*.tsbuildinfo
+
+# Build output
+build/
+builds/
+build/Release
+.bazel-out/
+.next
+out
+.nuxt
+.vuepress/dist
+.vitepress/dist/
+.vitepress/cache/
+
+# Test output
+test-results/
+karma-results.html
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Compiled files
+*.js
+*.js.map
+*.tsbuildinfo
+*.sass-cache
+*.css.map
+
+# IDE and Editor files
 .idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# Visual Studio Code
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.vscode-test/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
 .history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
+# OS system files
 .DS_Store
 Thumbs.db
+
+# Miscellaneous
+bower_components/
+jspm_packages/
+web_modules/
+lib-cov/
+.node_repl_history
+.yarn-integrity
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+libpeerconnection.log
+testem.log
+connect.lock
+.typings
+.tern-port
+
+# Vite log files
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Serverless and related caches
+.serverless/
+.fusebox/
+
+# Others
+*.tgz

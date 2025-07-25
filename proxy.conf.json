@@ -1,0 +1,11 @@
+{
+    "/empleados*":{
+        "target":"http://localhost:4200/",
+        "secure":false,
+        "changeOrigin":false,
+        "log.level":"debug",
+        "pathRewrite":{
+            "^/empleados":""
+        }
+    }
+}

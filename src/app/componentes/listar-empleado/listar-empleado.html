@@ -1,0 +1,39 @@
+<p>listar-empleado works!</p>
+<div class="card">
+  <div class="card-header">Empleados</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-primary">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of Empleados; let iControl = index">
+            <td>{{ empleado.id }}</td>
+            <td>{{ empleado.nombre }}</td>
+            <td>{{ empleado.correo }}</td>
+            <td>
+              <a
+                class="btn btn-info"
+                [routerLink]="['/editar-empleado', empleado.id]"
+                routerLinkActive="active"
+                >Editar</a
+              >
+              |
+              <a
+                class="btn btn-danger"
+                (click)="borrarRegistro(empleado.id, iControl)"
+                >Borrar</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
